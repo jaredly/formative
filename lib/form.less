@@ -1,0 +1,122 @@
+
+@import "./colors.less";
+
+.Form {
+  h1,h2,h3,h4,h5 {
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
+
+  &_buttons {
+    padding-top: 15px;
+    font-size: 19px;
+
+    button {
+      margin-left: 5px;
+    }
+  }
+
+  label {
+    cursor: pointer;
+  }
+
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    border-color: #aaa;
+    margin: 0 0 10px 0;
+    min-height: 100px;
+        
+  }
+
+  .mono-text {
+    font-family: monospace;
+  }
+
+  .text-label {
+    font-size: 13px;
+    color: #666;
+    display: block;
+  }
+
+  .checkbox-label {
+    font-size: 14px;
+    margin: 10px 0;
+    display: block;
+  }
+
+  input[type='text'] {
+    display: block;
+    font-size: 16px;
+    padding: 3px 5px;
+    width: 100%;
+    margin-bottom: 4px;
+  }
+  input::before {
+    content: attr(title);
+  }
+}
+
+.Radio_title {
+  margin: 10px 12px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.ProjectConfig_section,
+.Radio {
+
+  border-radius: 2px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+  background-color: @base-white;
+  margin: 10px 0 0;
+
+}
+
+.ProjectConfig_section_body,
+.Radio_body {
+  padding: 10px;
+}
+.Radio_body:empty {
+  padding: 0;
+}
+
+.section-title,
+.Radio_buttons {
+  // background-color: rgba(0, 197, 232, 0.2);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  .Radio_button:first-of-type {
+    // border-top-left-radius: 4px;
+  }
+}
+
+.section-title,
+.Radio_button {
+  padding: 10px 15px;
+  display: inline-block;
+  margin: 0;
+  cursor: pointer;
+  font-size: 14px;
+
+  box-shadow: none;//2px 2px 6px transparent;
+  transition: box-shadow .2s ease;
+
+  &:focus,
+  &:hover {
+    box-shadow: 0px 2px 6px #777;
+    position: relative;
+  }
+
+  input[type="radio"] {
+    display: none;
+  }
+
+  &-active {
+    background-color: @base-light; // rgba(0, 89, 136, 0.33);
+  }
+}
+
